@@ -4737,7 +4737,9 @@
       "Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0-rc.1.24451.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0-rc.1.24451.1",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-rc.1.24451.1"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-rc.1.24451.1",
+      "Microsoft.Extensions.DependencyInjection >= 9.0.0-rc.1.24431.7",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.0-rc.1.24431.7"
     ]
   },
   "packageFolders": {
@@ -4804,6 +4806,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.0-rc.1.24451.1, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[9.0.0-rc.1.24431.7, )"
+          },
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[9.0.0-rc.1.24431.7, )"
           }
         },
         "imports": [
@@ -4828,5 +4838,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

@@ -12,7 +12,6 @@ namespace ReviewAggregatorWebApp
     public class Startup
     {
         private IConfiguration _configuration;
-        private bool stringworks;
 
         public Startup(IConfiguration configuration)
         {
@@ -24,11 +23,11 @@ namespace ReviewAggregatorWebApp
             services.AddMvc();
             services.AddDbContext<AppDbContext>(options => 
                 options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IAllUsers, UserRepository>();
             services.AddScoped<ICategoryRepository<Country>, CountryRepository>();
             services.AddScoped<ICategoryRepository<Director>, DirectorRepository>();
             services.AddScoped<ICategoryRepository<Genre>, GenreRepository>();
             services.AddTransient<IAllMovies, MovieRepository>();
-            services.AddTransient<IAllUsers, UserRepository>();
             services.AddTransient<IAllReviews, ReviewRepository>();
         }
 

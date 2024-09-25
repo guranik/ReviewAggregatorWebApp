@@ -146,6 +146,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0-rc.1.24451.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0-rc.1.24431.7, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0-rc.1.24431.7, )"
             }
           },
           "imports": [
