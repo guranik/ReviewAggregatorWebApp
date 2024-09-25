@@ -24,9 +24,9 @@ namespace ReviewAggregatorWebApp
             services.AddDbContext<AppDbContext>(options => 
                 options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<IAllUsers, UserRepository>();
-            services.AddScoped<ICategoryRepository<Country>, CountryRepository>();
-            services.AddScoped<ICategoryRepository<Director>, DirectorRepository>();
-            services.AddScoped<ICategoryRepository<Genre>, GenreRepository>();
+            services.AddTransient<IAllDirectors, DirectorRepository>();
+            services.AddTransient<IAllGenres, GenreRepository>();
+            services.AddTransient<IAllCountries, CountryRepository>();
             services.AddTransient<IAllMovies, MovieRepository>();
             services.AddTransient<IAllReviews, ReviewRepository>();
         }
