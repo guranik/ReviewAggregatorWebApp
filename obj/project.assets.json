@@ -4735,6 +4735,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Data >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 9.0.0-rc.1.24451.1",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0-rc.1.24451.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0-rc.1.24451.1",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-rc.1.24451.1",
@@ -4791,6 +4792,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.0.0-rc.1.24451.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
